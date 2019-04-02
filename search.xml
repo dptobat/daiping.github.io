@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title><![CDATA[Hello World]]></title>
-    <url>%2F2018%2F09%2F01%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+    <title><![CDATA[常见的小问题(持续更新)]]></title>
+    <url>%2F2019%2F04%2F02%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[微信小程序客服消息发中文的时候：直接json_encode会乱码，导致发出去的是乱码文字，可以使用下面的方式： json_encode($send_data,JSON_UNESCAPED_UNICODE)； 在云服务器上没有设置放开端口号的情况下，开启了防火墙，导致ssh端口也无法登录；只能使用浏览器 VNC 方式登录 了；输入账号密码；然后在这边开启；firewall-cmd –zone=public –add-port=1234/tcp –permanent ； firewall-cmd –reload laravel配置多环境文件时,例如.env.development,.env.production；这些，采用nginx来配置时：只有将配置写在类似解析： location ~ [^/].php(/|$) ，.php的时候才有效；配置方法是：fastcgi_param APP_ENV development,这样laravel加载的配置文件就是.env.development ,具体可以看laravel源码知道（Illuminate\Foundation\Bootstrap\LoadEnvironmentVariables中bootstrap里面的checkForSpecificEnvironmentFile方法）；配置在fastcgi_param的参数都可以在$_SERVER查看到；(只适用于laravel,lumen需要加一些代码)Lumen需要修改下源代码：app.php的代码修改为（可能并不一定有用）： try { //判断是不是cli模式： $dpenv=php_sapi_name() == ‘cli’?env(‘APP_ENV’):$_SERVER[‘APP_ENV’]; (new Dotenv\Dotenv(dirname(DIR),’.env.’.$dpenv))-&gt;load(); } catch (Dotenv\Exception\InvalidPathException $e) { // }]]></content>
       <categories>
-        <category>Hexo</category>
+        <category>问题</category>
       </categories>
       <tags>
-        <tag>Hexo</tag>
+        <tag>php mongo 微信</tag>
       </tags>
   </entry>
 </search>
