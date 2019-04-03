@@ -96,17 +96,18 @@
 
 
 
-  <meta name="description" content="Don&apos;t Stop Me Now">
-<meta property="og:type" content="website">
-<meta property="og:title" content="tags">
-<meta property="og:url" content="https://www.saomayun.cn/tags/index.html">
+  <meta name="description" content="原文为：学习Swoole需要掌握哪些基础知识 多进程/多线程 了解Linux操作系统进程和线程的概念https://www.zhihu.com/question/21535820/answer/22915780  一、关于进程和线程，首先从定义上理解就有所不同１、进程是什么？是具有一定独立功能的程序、它是系统进行资源分配和调度的一个独立单位，重点在系统调度和单独的单位，也就是说进程是可以独">
+<meta name="keywords" content="swoole,linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="swoole要掌握的基础知识">
+<meta property="og:url" content="https://www.saomayun.cn/2019/04/02/swoole_1/index.html">
 <meta property="og:site_name" content="Daiping&#39;s Blog">
-<meta property="og:description" content="Don&apos;t Stop Me Now">
+<meta property="og:description" content="原文为：学习Swoole需要掌握哪些基础知识 多进程/多线程 了解Linux操作系统进程和线程的概念https://www.zhihu.com/question/21535820/answer/22915780  一、关于进程和线程，首先从定义上理解就有所不同１、进程是什么？是具有一定独立功能的程序、它是系统进行资源分配和调度的一个独立单位，重点在系统调度和单独的单位，也就是说进程是可以独">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-01T11:25:22.835Z">
+<meta property="og:updated_time" content="2019-04-03T14:34:22.923Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tags">
-<meta name="twitter:description" content="Don&apos;t Stop Me Now">
+<meta name="twitter:title" content="swoole要掌握的基础知识">
+<meta name="twitter:description" content="原文为：学习Swoole需要掌握哪些基础知识 多进程/多线程 了解Linux操作系统进程和线程的概念https://www.zhihu.com/question/21535820/answer/22915780  一、关于进程和线程，首先从定义上理解就有所不同１、进程是什么？是具有一定独立功能的程序、它是系统进行资源分配和调度的一个独立单位，重点在系统调度和单独的单位，也就是说进程是可以独">
 
 
 
@@ -114,7 +115,7 @@
 
   
   
-  <link rel="canonical" href="https://www.saomayun.cn/tags/">
+  <link rel="canonical" href="https://www.saomayun.cn/2019/04/02/swoole_1/">
 
 
 
@@ -124,7 +125,7 @@
   };
 </script>
 
-  <title>tags | Daiping's Blog</title>
+  <title>swoole要掌握的基础知识 | Daiping's Blog</title>
   
 
 
@@ -244,7 +245,7 @@
         
         
           
-          <li class="menu-item menu-item-tags menu-item-active">
+          <li class="menu-item menu-item-tags">
 
     
     
@@ -366,107 +367,315 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.saomayun.cn/2019/04/02/swoole_1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Dai Ping">
+      <meta itemprop="description" content="Don't Stop Me Now">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Daiping's Blog">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-<h1 class="post-title" itemprop="name headline">tags
-
-</h1>
-
-<div class="post-meta">
-  
-  
-
-
-
-</div>
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <div class="tag-cloud">
-            <div class="tag-cloud-title">
+          <h1 class="post-title" itemprop="name headline">swoole要掌握的基础知识
+
               
-              
-                
-                  
-                
-              
-                
-                  
-                
-              
-                
-                  
-                
-              
-                
-                  
-                
-              
-                
-                  
-                
-              
-              目前共计 5 个标签
-            </div>
-            <div class="tag-cloud-tags">
-              
-                <a href="/tags/linux/" style="font-size: 12px; color: #ccc">linux</a> <a href="/tags/mongo/" style="font-size: 12px; color: #ccc">mongo</a> <a href="/tags/php/" style="font-size: 12px; color: #ccc">php</a> <a href="/tags/swoole/" style="font-size: 12px; color: #ccc">swoole</a> <a href="/tags/wechat/" style="font-size: 12px; color: #ccc">wechat</a>
-              
-            </div>
-          </div>
+            
+          </h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-04-02 00:00:00" itemprop="dateCreated datePublished" datetime="2019-04-02T00:00:00+08:00">2019-04-02</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-04-03 22:34:22" itemprop="dateModified" datetime="2019-04-03T22:34:22+08:00">2019-04-03</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/swoole/" itemprop="url" rel="index"><span itemprop="name">swoole</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <p>原文为：<br>学习Swoole需要掌握哪些基础知识</p>
+<h1 id="多进程-多线程"><a href="#多进程-多线程" class="headerlink" title="多进程/多线程"></a>多进程/多线程</h1><ul>
+<li><strong>了解Linux操作系统进程和线程的概念</strong><a href="https://www.zhihu.com/question/21535820/answer/22915780" target="_blank" rel="noopener">https://www.zhihu.com/question/21535820/answer/22915780</a></li>
+</ul>
+<p>一、关于进程和线程，首先从定义上理解就有所不同<br>１、进程是什么？<br>是具有一定独立功能的程序、它是系统进行资源分配和调度的一个独立单位，重点在系统调度和单独的单位，也就是说进程是可以独          立运行的一段程序。<br>2、线程又是什么？<br>线程进程的一个实体，是CPU调度和分派的基本单位，他是比进程更小的能独立运行的基本单位，线程自己基本上不拥有系统资源。    在运行时，只是暂用一些计数器、寄存器和栈 。</p>
+<p>二、他们之间的关系<br>　1. 一个线程只能属于一个进程，而一个进程可以有多个线程，但至少有一个线程（通常说的主线程）。<br>　2. 资源分配给进程，同一进程的所有线程共享该进程的所有资源。<br>　3. 线程在执行过程中，需要协作同步。不同进程的线程间要利用消息通信的办法实现同步。<br>　4. 处理机分给线程，即真正在处理机上运行的是线程。<br>　5. 线程是指进程内的一个执行单元，也是进程内的可调度实体。  </p>
+<p>三、从三个角度来剖析二者之间的区别    </p>
+<ol>
+<li>调度：线程作为调度和分配的基本单位，进程作为拥有资源的基本单位。    </li>
+<li>并发性：不仅进程之间可以并发执行，同一个进程的多个线程之间也可以并发执行。    </li>
+<li>拥有资源：进程是拥有资源的一个独立单位，线程不拥有系统资源，但可以访问隶属于进程的资源</li>
+</ol>
+<ul>
+<li><strong>了解Linux进程/线程切换调度的基本知识</strong> </li>
+</ul>
+<p>1.进程切换：</p>
+<p>进程切换是当今多任务多用户操作系统所应具有的基本功能。 操作系统为了控制进程的执行，必须有能力挂起正在CPU上运行的进程，并恢复以前挂起的某个进程的执行，这种行为被称为进程切换，任务切换或上下文切换，挂起正在 CPU 上执行的进程，与中断时保存现场是有区别的，中断前后是在同一个进程上下文中，只是由用户态转向内核态执行。</p>
+<p>进程切换分两步<a href="https://blog.csdn.net/xiangwanpeng/article/details/78196539" target="_blank" rel="noopener">https://blog.csdn.net/xiangwanpeng/article/details/78196539</a></p>
+<p>1.切换页目录以使用新的地址空间</p>
+<p>2.切换内核栈和硬件上下文。</p>
+<p>对于linux来说，线程和进程的最大区别就在于地址空间。<br>对于线程切换，第1步是不需要做的，第2是进程和线程切换都要做的。所以明显是进程切换代价大</p>
+<p>线程上下文切换和进程上下文切换一个最主要的区别是线程的切换虚拟内存空间依然是相同的，但是进程切换是不同的。这两种上下文切换的处理都是通过操作系统内核来完成的。内核的这种切换过程伴随的最显著的性能损耗是将寄存器中的内容切换出。</p>
+<p>另外一个隐藏的损耗是上下文的切换会扰乱处理器的缓存机制。简单的说，一旦去切换上下文，处理器中所有已经缓存的内存地址一瞬间都作废了。还有一个显著的区别是当你改变虚拟内存空间的时候，处理的页表缓冲（processor’s Translation Lookaside Buffer (TLB)）或者相当的神马东西会被全部刷新，这将导致内存的访问在一段时间内相当的低效。但是在线程的切换中，不会出现这个问题。</p>
+<ul>
+<li><strong>了解进程间通信的基本知识，如管道、UnixSocket、消息队列、共享内存</strong> </li>
+</ul>
+<p>进程间通信的目的：<a href="https://blog.csdn.net/gatieme/article/details/50908749" target="_blank" rel="noopener">https://blog.csdn.net/gatieme/article/details/50908749</a></p>
+<ol>
+<li><p>数据传输<br>一个进程需要将它的数据发送给另一个进程，发送的数据量在一个字节到几M字节之间</p>
+</li>
+<li><p>共享数据<br>  多个进程想要操作共享数据，一个进程对共享数据</p>
+</li>
+<li><p>通知事<br>一个进程需要向另一个或一组进程发送消息，通知它（它们）发生了某种事件（如进程终止时要通知父进程）。</p>
+</li>
+<li><p>资源共享<br>多个进程之间共享同样的资源。为了作到这一点，需要内核提供锁和同步机制。</p>
+</li>
+<li><p>进程控制<br>有些进程希望完全控制另一个进程的执行（如Debug进程），此时控制进程希望能够拦截另一个进程的所有陷入和异常，并能够及时知道它的状态改变。</p>
+</li>
+</ol>
+<p>linux下的进程通信手段基本上是从Unix平台上的进程通信手段继承而来的。而对Unix发展做出重大贡献的两大主力AT&amp;T的贝尔实验室及BSD（加州大学伯克利分校的伯克利软件发布中心）在进程间通信方面的侧重点有所不同。</p>
+<p>前者对Unix早期的进程间通信手段进行了系统的改进和扩充，形成了“system V IPC”，通信进程局限在单个计算机内；</p>
+<p>后者则跳过了该限制，形成了基于套接口（socket）的进程间通信机制。</p>
+<ul>
+<li>早期UNIX进程间通信</li>
+<li>基于System V进程间通信</li>
+<li>基于Socket进程间通信</li>
+<li>POSIX进程间通信。</li>
+<li>UNIX进程间通信方式包括：管道、FIFO、信号。</li>
+</ul>
+<p>System V进程间通信方式包括：System V消息队列、System V信号灯、System V共享内存</p>
+<p>POSIX进程间通信包括：posix消息队列、posix信号灯、posix共享内存。</p>
+<p>由于Unix版本的多样性，电子电气工程协会（IEEE）开发了一个独立的Unix标准，这个新的ANSI Unix标准被称为计算机环境的可移植性操作系统界面（PSOIX）。现有大部分Unix和流行版本都是遵循POSIX标准的，而Linux从一开始就遵循POSIX标准；</p>
+<p>BSD并不是没有涉足单机内的进程间通信（socket本身就可以用于单机内的进程间通信）。事实上，很多Unix版本的单机IPC留有BSD的痕迹，如4.4BSD支持的匿名内存映射、4.3+BSD对可靠信号语义的实现等等。</p>
+<p>linux使用的进程间通信方式</p>
+<p>管道（pipe）,流管道(s_pipe)和有名管道（FIFO）</p>
+<p>管道这种通讯方式有两种限制，一是半双工的通信，数据只能单向流动，二是只能在具有亲缘关系的进程间使用。进程的亲缘关系通常是指父子进程关系。</p>
+<p>流管道s_pipe: 去除了第一种限制,可以双向传输.</p>
+<p>管道可用于具有亲缘关系进程间的通信，命名管道:name_pipe克服了管道没有名字的限制，因此，除具有管道所具有的功能外，它还允许无亲缘关系进程间的通信；</p>
+<p><strong>信号量（signal）</strong></p>
+<p>信号量是一个计数器，可以用来控制多个进程对共享资源的访问。它常作为一种锁机制，防止某进程正在访问共享资源时，其他进程也访问该资源。因此，主要作为进程间以及同一进程内不同线程之间的同步手段。</p>
+<p>信号是比较复杂的通信方式，用于通知接受进程有某种事件发生，除了用于进程间通信外，进程还可以发送信号给进程本身；linux除了支持Unix早期信号语义函数sigal外，还支持语义符合Posix.1标准的信号函数sigaction（实际上，该函数是基于BSD的，BSD为了实现可靠信号机制，又能够统一对外接口，用sigaction函数重新实现了signal函数）；</p>
+<p><strong>消息队列</strong></p>
+<p>消息队列是由消息的链表，存放在内核中并由消息队列标识符标识。消息队列克服了信号传递信息少、管道只能承载无格式字节流以及缓冲区大小受限等缺点。</p>
+<p>消息队列是消息的链接表，包括Posix消息队列system V消息队列。有足够权限的进程可以向队列中添加消息，被赋予读权限的进程则可以读走队列中的消息。消息队列克服了信号承载信息量少，管道只能承载无格式字节流以及缓冲区大小受限等缺点</p>
+<p><strong>共享内存</strong></p>
+<p>共享内存就是映射一段能被其他进程所访问的内存，这段共享内存由一个进程创建，但多个进程都可以访问。共享内存是最快的 IPC 方式，它是针对其他进程间通信方式运行效率低而专门设计的。它往往与其他通信机制，如信号量，配合使用，来实现进程间的同步和通信。</p>
+<p>使得多个进程可以访问同一块内存空间，是最快的可用IPC形式。是针对其他通信机制运行效率较低而设计的。往往与其它通信机制，如信号量结合使用，来达到进程间的同步及互斥。</p>
+<p><strong>信号</strong></p>
+<p>信号是一种比较复杂的通信方式，用于通知接收进程某个事件已经发生。</p>
+<p>主要作为进程间以及同一进程不同线程之间的同步手段。</p>
+<p><strong>套接字（socket)</strong></p>
+<p>套解口也是一种进程间通信机制，与其他通信机制不同的是，它可用于不同机器间的进程通信</p>
+<p>更为一般的进程间通信机制，可用于不同机器之间的进程间通信。起初是由Unix系统的BSD分支开发出来的，但现在一般可以移植到其它类Unix系统上：Linux和System V的变种都支持套接字套解口也是一种进程间通信机制，与其他通信机制不同的是，它可用于不同机器间的进程通信</p>
+<p>更为一般的进程间通信机制，可用于不同机器之间的进程间通信。起初是由Unix系统的BSD分支开发出来的，但现在一般可以移植到其它类Unix系统上：Linux和System V的变种都支持套接字</p>
+<p><strong>进程间通信各种方式效率比较</strong></p>
+<p>类型    无连接    可靠    流控制    记录消息类型    优先级</p>
+<p>普通PIPE    N    Y    Y        N</p>
+<p>流PIPE    N    Y    Y        N</p>
+<p>命名PIPE(FIFO)    N    Y    Y        N</p>
+<p>消息队列    N    Y    Y        Y</p>
+<p>信号量    N    Y    Y        Y</p>
+<p>共享存储    N    Y    Y        Y</p>
+<p>UNIX流SOCKET    N    Y    Y        N</p>
+<p>UNIX数据包SOCKET    Y    Y    N        N</p>
+<p>注:无连接: 指无需调用某种形式的OPEN,就有发送消息的能力流控制:</p>
+<p>如果系统资源短缺或者不能接收更多消息,则发送进程能进行流量控制</p>
+<p>各种通信方式的比较和优缺点</p>
+<p>管道：速度慢，容量有限，只有父子进程能通讯</p>
+<p>FIFO：任何进程间都能通讯，但速度慢</p>
+<p>消息队列：容量受到系统限制，且要注意第一次读的时候，要考虑上一次没有读完数据的问题</p>
+<p>信号量：不能传递复杂消息，只能用来同步</p>
+<p>共享内存区：能够很容易控制容量，速度快，但要保持同步，比如一个进程在写的时候，另一个进程要注意读写的问题，相当于线程中的线程安全，当然，共享内存区同样可以用作线程间通讯，不过没这个必要，线程间本来就已经共享了同一进程内的一块内存</p>
+<p>如果用户传递的信息较少或是需要通过信号来触发某些行为．前文提到的软中断信号机制不失为一种简捷有效的进程间通信方式．</p>
+<p>但若是进程间要求传递的信息量比较大或者进程间存在交换数据的要求，那就需要考虑别的通信方式了。</p>
+<p>无名管道简单方便．但局限于单向通信的工作方式．并且只能在创建它的进程及其子孙进程之间实现管道的共享：</p>
+<p>有名管道虽然可以提供给任意关系的进程使用．但是由于其长期存在于系统之中，使用不当容易出错．所以普通用户一般不建议使用。</p>
+<p>消息缓冲可以不再局限于父子进程，而允许任意进程通过共享消息队列来实现进程间通信，并由系统调用函数来实现消息发送和接收之间的同步，从而使得用户在使用消息缓冲进行通信时不再需要考虑同步问题，使用方便，但是信息的复制需要额外消耗CPU的时间，不适宜于信息量大或操作频繁的场合。</p>
+<p>共享内存针对消息缓冲的缺点改而利用内存缓冲区直接交换信息，无须复制，快捷、信息量大是其优点。</p>
+<p>但是共享内存的通信方式是通过将共享的内存缓冲区直接附加到进程的虚拟地址空间中来实现的，因此，这些进程之间的读写操作的同步问题操作系统无法实现。必须由各进程利用其他同步工具解决。另外，由于内存实体存在于计算机系统中，所以只能由处于同一个计算机系统中的诸进程共享。不方便网络通信。</p>
+<p>共享内存块提供了在任意数量的进程之间进行高效双向通信的机制。每个使用者都可以读取写入数据，但是所有程序之间必须达成并遵守一定的协议，以防止诸如在读取信息之前覆写内存空间等竞争状态的出现。</p>
+<p>不幸的是，Linux无法严格保证提供对共享内存块的独占访问，甚至是在您通过使用IPC_PRIVATE创建新的共享内存块的时候也不能保证访问的独占性。 同时，多个使用共享内存块的进程之间必须协调使用同一个键值。</p>
+<p>管道：速度慢，容量有限，只有父子进程能通讯</p>
+<p>FIFO：任何进程间都能通讯，但速度慢</p>
+<p>消息队列：容量受到系统限制，且要注意第一次读的时候，要考虑上一次没有读完数据的问题</p>
+<p>信号量：不能传递复杂消息，只能用来同步</p>
+<p>共享内存区：能够很容易控制容量，速度快，但要保持同步，比如一个进程在写的时候，另一个进程要注意读写的问题，相当于线程中的线程安全，当然，共享内存区同样可以用作线程间通讯，不过没这个必要，线程间本来就已经共享了同一进程内的一块内存</p>
+<p>如果用户传递的信息较少或是需要通过信号来触发某些行为．前文提到的软中断信号机制不失为一种简捷有效的进程间通信方式．</p>
+<p>但若是进程间要求传递的信息量比较大或者进程间存在交换数据的要求，那就需要考虑别的通信方式了。</p>
+<p>无名管道简单方便．但局限于单向通信的工作方式．并且只能在创建它的进程及其子孙进程之间实现管道的共享：</p>
+<p>有名管道虽然可以提供给任意关系的进程使用．但是由于其长期存在于系统之中，使用不当容易出错．所以普通用户一般不建议使用。</p>
+<p>消息缓冲可以不再局限于父子进程，而允许任意进程通过共享消息队列来实现进程间通信，并由系统调用函数来实现消息发送和接收之间的同步，从而使得用户在使用消息缓冲进行通信时不再需要考虑同步问题，使用方便，但是信息的复制需要额外消耗CPU的时间，不适宜于信息量大或操作频繁的场合。</p>
+<p>共享内存针对消息缓冲的缺点改而利用内存缓冲区直接交换信息，无须复制，快捷、信息量大是其优点。</p>
+<p>但是共享内存的通信方式是通过将共享的内存缓冲区直接附加到进程的虚拟地址空间中来实现的，因此，这些进程之间的读写操作的同步问题操作系统无法实现。必须由各进程利用其他同步工具解决。另外，由于内存实体存在于计算机系统中，所以只能由处于同一个计算机系统中的诸进程共享。不方便网络通信。</p>
+<p>共享内存块提供了在任意数量的进程之间进行高效双向通信的机制。每个使用者都可以读取写入数据，但是所有程序之间必须达成并遵守一定的协议，以防止诸如在读取信息之前覆写内存空间等竞争状态的出现。</p>
+<p>不幸的是，Linux无法严格保证提供对共享内存块的独占访问，甚至是在您通过使用IPC_PRIVATE创建新的共享内存块的时候也不能保证访问的独占性。 同时，多个使用共享内存块的进程之间必须协调使用同一个键值。</p>
+
       
     </div>
-    
-
-
 
     
+
     
     
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/swoole/" rel="tag"># swoole</a>
+          
+            <a href="/tags/linux/" rel="tag"># linux</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/04/02/hello-world/" rel="next" title="常见的小问题(持续更新)">
+                <i class="fa fa-chevron-left"></i> 常见的小问题(持续更新)
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
   </div>
 
 
@@ -495,8 +704,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -610,6 +828,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#多进程-多线程"><span class="nav-number">1.</span> <span class="nav-text">多进程/多线程</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
