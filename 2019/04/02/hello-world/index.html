@@ -105,7 +105,7 @@
 <meta property="og:description" content="微信小程序客服消息发中文的时候：直接json_encode会乱码，导致发出去的是乱码文字，可以使用下面的方式： json_encode($send_data,JSON_UNESCAPED_UNICODE)；  在云服务器上没有设置放开端口号的情况下，开启了防火墙，导致ssh端口也无法登录；只能使用浏览器 VNC 方式登录 了；输入账号密码；然后在这边开启；firewall-cmd –zone=p">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://user-images.githubusercontent.com/13936586/51068009-e49af280-1652-11e9-9c13-3353a5ee2a1f.png">
-<meta property="og:updated_time" content="2019-04-02T02:09:12.169Z">
+<meta property="og:updated_time" content="2019-04-16T08:17:39.336Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="常见的小问题(持续更新)">
 <meta name="twitter:description" content="微信小程序客服消息发中文的时候：直接json_encode会乱码，导致发出去的是乱码文字，可以使用下面的方式： json_encode($send_data,JSON_UNESCAPED_UNICODE)；  在云服务器上没有设置放开端口号的情况下，开启了防火墙，导致ssh端口也无法登录；只能使用浏览器 VNC 方式登录 了；输入账号密码；然后在这边开启；firewall-cmd –zone=p">
@@ -394,7 +394,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Dai Ping">
       <meta itemprop="description" content="Don't Stop Me Now">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/logo.png">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -432,12 +432,24 @@
                 
               
 
-              <time title="创建时间：2019-04-02 00:00:00 / 修改时间：10:09:12" itemprop="dateCreated datePublished" datetime="2019-04-02T00:00:00+08:00">2019-04-02</time>
+              <time title="创建时间：2019-04-02 00:00:00" itemprop="dateCreated datePublished" datetime="2019-04-02T00:00:00+08:00">2019-04-02</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-04-16 16:17:39" itemprop="dateModified" datetime="2019-04-16T16:17:39+08:00">2019-04-16</time>
               
             
           </span>
@@ -494,9 +506,11 @@
 </li>
 <li><p>在云服务器上没有设置放开端口号的情况下，开启了防火墙，导致ssh端口也无法登录；只能使用<br>浏览器 VNC 方式登录 了；输入账号密码；然后在这边开启；firewall-cmd –zone=public –add-port=1234/tcp –permanent ； firewall-cmd –reload</p>
 </li>
-<li><p>laravel配置多环境文件时,例如.env.development,.env.production；这些，采用nginx来配置时：只有将配置写在类似解析： location ~ [^/].php(/|$) ，.php的时候才有效；配置方法是：<br>fastcgi_param APP_ENV development,这样laravel加载的配置文件就是.env.development ,具体可以看laravel源码知道（Illuminate\Foundation\Bootstrap\LoadEnvironmentVariables中bootstrap里面的checkForSpecificEnvironmentFile方法）；配置在fastcgi_param的参数都可以在$_SERVER查看到；(只适用于laravel,lumen需要加一些代码)<br><img src="https://user-images.githubusercontent.com/13936586/51068009-e49af280-1652-11e9-9c13-3353a5ee2a1f.png" alt><br>Lumen需要修改下源代码：app.php的代码修改为（可能并不一定有用）：<br> try {<br> //判断是不是cli模式：<br> $dpenv=php_sapi_name() == ‘cli’?env(‘APP_ENV’):$_SERVER[‘APP_ENV’];<br> (new Dotenv\Dotenv(dirname(<strong>DIR</strong>),’.env.’.$dpenv))-&gt;load();<br> } catch (Dotenv\Exception\InvalidPathException $e) {<br> //<br> }</p>
+<li><p>laravel配置多环境文件时,例如.env.development,.env.production；这些，采用nginx来配置时：只有将配置写在类似解析： location ~ [^/].php(/|$) ，.php的时候才有效；配置方法是：<br>fastcgi_param APP_ENV development,这样laravel加载的配置文件就是.env.development ,具体可以看laravel源码知道（Illuminate\Foundation\Bootstrap\LoadEnvironmentVariables中bootstrap里面的checkForSpecificEnvironmentFile方法）；配置在fastcgi_param的参数都可以在$_SERVER查看到；(只适用于laravel,lumen需要加一些代码)<br><img src="https://user-images.githubusercontent.com/13936586/51068009-e49af280-1652-11e9-9c13-3353a5ee2a1f.png" alt><br>Lumen需要修改下源代码：app.php的代码修改为（可能并不一定有用）：<br> try {<br> //判断是不是cli模式：<br> $dpenv=php_sapi_name() == ‘cli’?env(‘APP_ENV’):$_SERVER[‘APP_ENV’];<br> (new Dotenv\Dotenv(dirname(<strong>DIR</strong>),’.env.’.$dpenv))-&gt;load();<br> } catch (Dotenv\Exception\InvalidPathException $e) {<br> //<br> }<br>4，在使用supervisor报错：<br>改变代码，不能及时生效；只能重启队列；应该是缓存了代码；<br>supervisorctl reread<br>error: <class 'socket.error'>, [Errno 2] No such file or directory: file: /usr/lib64/python2.7/socket.py line: 224</class></p>
 </li>
 </ol>
+<p>supervisorctl stop lumen-worker:*<br>unix:///tmp/supervisor.sock no such file</p>
+<p>解决：<br>重新指定配置文件：<br>supervisord -c ./supervisord.conf<br>supervisorctl restart lumen-worker:*<br>成功，但是：<br>却重新多了很多的队列</p>
 
       
     </div>
@@ -547,6 +561,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2019/06/03/php_1/" rel="prev" title="php核心技术与开发实践：第一章">
+                php核心技术与开发实践：第一章 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -594,7 +612,7 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <img class="site-author-image" itemprop="image" src="/images/avatar.gif" alt="Dai Ping">
+              <img class="site-author-image" itemprop="image" src="/images/logo.png" alt="Dai Ping">
             
               <p class="site-author-name" itemprop="name">Dai Ping</p>
               <div class="site-description motion-element" itemprop="description">Don't Stop Me Now</div>
@@ -607,7 +625,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -624,7 +642,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">2</span>
+                      
+                    
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">分类</span>
                   
                 </div>
@@ -651,7 +671,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">5</span>
+                      
+                    
+                    <span class="site-state-item-count">6</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
