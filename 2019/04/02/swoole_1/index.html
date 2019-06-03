@@ -96,18 +96,20 @@
 
 
 
-  <meta name="description" content="原文为：学习Swoole需要掌握哪些基础知识 多进程/多线程 了解Linux操作系统进程和线程的概念https://www.zhihu.com/question/21535820/answer/22915780  一、关于进程和线程，首先从定义上理解就有所不同１、进程是什么？是具有一定独立功能的程序、它是系统进行资源分配和调度的一个独立单位，重点在系统调度和单独的单位，也就是说进程是可以独">
+  <meta name="description" content="原文为：https://wiki.swoole.com/wiki/page/487.html学习Swoole需要掌握哪些基础知识 多进程/多线程 了解Linux操作系统进程和线程的概念https://www.zhihu.com/question/21535820/answer/22915780  一、关于进程和线程，首先从定义上理解就有所不同１、进程是什么？是具有一定独立功能的程序、它是系统进行资">
 <meta name="keywords" content="swoole,linux">
 <meta property="og:type" content="article">
 <meta property="og:title" content="swoole要掌握的基础知识">
 <meta property="og:url" content="https://www.saomayun.cn/2019/04/02/swoole_1/index.html">
 <meta property="og:site_name" content="Daiping&#39;s Blog">
-<meta property="og:description" content="原文为：学习Swoole需要掌握哪些基础知识 多进程/多线程 了解Linux操作系统进程和线程的概念https://www.zhihu.com/question/21535820/answer/22915780  一、关于进程和线程，首先从定义上理解就有所不同１、进程是什么？是具有一定独立功能的程序、它是系统进行资源分配和调度的一个独立单位，重点在系统调度和单独的单位，也就是说进程是可以独">
+<meta property="og:description" content="原文为：https://wiki.swoole.com/wiki/page/487.html学习Swoole需要掌握哪些基础知识 多进程/多线程 了解Linux操作系统进程和线程的概念https://www.zhihu.com/question/21535820/answer/22915780  一、关于进程和线程，首先从定义上理解就有所不同１、进程是什么？是具有一定独立功能的程序、它是系统进行资">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-04-03T14:34:22.923Z">
+<meta property="og:image" content="https://www.saomayun.cn/images/17201205-8ac47f1f1fcd4773bd4edd947c0bb1f4.png">
+<meta property="og:updated_time" content="2019-04-09T02:04:19.720Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="swoole要掌握的基础知识">
-<meta name="twitter:description" content="原文为：学习Swoole需要掌握哪些基础知识 多进程/多线程 了解Linux操作系统进程和线程的概念https://www.zhihu.com/question/21535820/answer/22915780  一、关于进程和线程，首先从定义上理解就有所不同１、进程是什么？是具有一定独立功能的程序、它是系统进行资源分配和调度的一个独立单位，重点在系统调度和单独的单位，也就是说进程是可以独">
+<meta name="twitter:description" content="原文为：https://wiki.swoole.com/wiki/page/487.html学习Swoole需要掌握哪些基础知识 多进程/多线程 了解Linux操作系统进程和线程的概念https://www.zhihu.com/question/21535820/answer/22915780  一、关于进程和线程，首先从定义上理解就有所不同１、进程是什么？是具有一定独立功能的程序、它是系统进行资">
+<meta name="twitter:image" content="https://www.saomayun.cn/images/17201205-8ac47f1f1fcd4773bd4edd947c0bb1f4.png">
 
 
 
@@ -447,7 +449,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-04-03 22:34:22" itemprop="dateModified" datetime="2019-04-03T22:34:22+08:00">2019-04-03</time>
+                <time title="修改时间：2019-04-09 10:04:19" itemprop="dateModified" datetime="2019-04-09T10:04:19+08:00">2019-04-09</time>
               
             
           </span>
@@ -499,7 +501,7 @@
       
 
       
-        <p>原文为：<br>学习Swoole需要掌握哪些基础知识</p>
+        <p>原文为：<a href="https://wiki.swoole.com/wiki/page/487.html" target="_blank" rel="noopener">https://wiki.swoole.com/wiki/page/487.html</a><br>学习Swoole需要掌握哪些基础知识</p>
 <h1 id="多进程-多线程"><a href="#多进程-多线程" class="headerlink" title="多进程/多线程"></a>多进程/多线程</h1><ul>
 <li><strong>了解Linux操作系统进程和线程的概念</strong><a href="https://www.zhihu.com/question/21535820/answer/22915780" target="_blank" rel="noopener">https://www.zhihu.com/question/21535820/answer/22915780</a></li>
 </ul>
@@ -614,6 +616,166 @@
 <p>但是共享内存的通信方式是通过将共享的内存缓冲区直接附加到进程的虚拟地址空间中来实现的，因此，这些进程之间的读写操作的同步问题操作系统无法实现。必须由各进程利用其他同步工具解决。另外，由于内存实体存在于计算机系统中，所以只能由处于同一个计算机系统中的诸进程共享。不方便网络通信。</p>
 <p>共享内存块提供了在任意数量的进程之间进行高效双向通信的机制。每个使用者都可以读取写入数据，但是所有程序之间必须达成并遵守一定的协议，以防止诸如在读取信息之前覆写内存空间等竞争状态的出现。</p>
 <p>不幸的是，Linux无法严格保证提供对共享内存块的独占访问，甚至是在您通过使用IPC_PRIVATE创建新的共享内存块的时候也不能保证访问的独占性。 同时，多个使用共享内存块的进程之间必须协调使用同一个键值。</p>
+<h1 id="SOCKET"><a href="#SOCKET" class="headerlink" title="SOCKET"></a>SOCKET</h1><p><a href="https://www.cnblogs.com/skynet/archive/2010/12/12/1903949.html" target="_blank" rel="noopener">https://www.cnblogs.com/skynet/archive/2010/12/12/1903949.html</a></p>
+<ul>
+<li><p><strong>了解SOCKET的基本操作如accept/connect、send/recv、close、listen、bind</strong></p>
+<p> <strong>socket()函数</strong></p>
+</li>
+</ul>
+<p>socket函数对应于普通文件的打开操作。普通文件的打开操作返回一个文件描述字，而socket()用于创建一个socket描述符（socket descriptor），它唯一标识一个socket。这个socket描述字跟文件描述字一样，后续的操作都有用到它，把它作为参数，通过它来进行一些读写操作。</p>
+<p>正如可以给fopen的传入不同参数值，以打开不同的文件。创建socket的时候，也可以指定不同的参数创建不同的socket描述符，socket函数的三个参数分别为：</p>
+<p>domain：即协议域，又称为协议族（family）。常用的协议族有，AF_INET、AF_INET6、AF_LOCAL（或称AF_UNIX，Unix域socket）、AF_ROUTE等等。协议族决定了socket的地址类型，在通信中必须采用对应的地址，如AF_INET决定了要用ipv4地址（32位的）与端口号（16位的）的组合、AF_UNIX决定了要用一个绝对路径名作为地址。<br>type：指定socket类型。常用的socket类型有，SOCK_STREAM、SOCK_DGRAM、SOCK_RAW、SOCK_PACKET、SOCK_SEQPACKET等等（socket的类型有哪些？）。<br>protocol：故名思意，就是指定协议。常用的协议有，IPPROTO_TCP、IPPTOTO_UDP、IPPROTO_SCTP、IPPROTO_TIPC等，它们分别对应TCP传输协议、UDP传输协议、STCP传输协议、TIPC传输协议（这个协议我将会单独开篇讨论！）。<br>注意：并不是上面的type和protocol可以随意组合的，如SOCK_STREAM不可以跟IPPROTO_UDP组合。当protocol为0时，会自动选择type类型对应的默认协议。</p>
+<p>当我们调用socket创建一个socket时，返回的socket描述字它存在于协议族（address family，AF_XXX）空间中，但没有一个具体的地址。如果想要给它赋值一个地址，就必须调用bind()函数，否则就当调用connect()、listen()时系统会自动随机分配一个端口</p>
+<p>   <strong>bind()函数</strong>    </p>
+<p>正如上面所说bind()函数把一个地址族中的特定地址赋给socket。例如对应AF_INET、AF_INET6就是把一个ipv4或ipv6地址和端口号组合赋给socket。<br>int bind(int sockfd, const struct sockaddr <em>addr, socklen_t addrlen);<br>函数的三个参数分别为：<br>sockfd：即socket描述字，它是通过socket()函数创建了，唯一标识一个socket。bind()函数就是将给这个描述字绑定一个名字。<br>addr：一个const struct sockaddr </em>指针，指向要绑定给sockfd的协议地址。这个地址结构根据地址创建socket时的地址协议族的不同而不同，如ipv4对应的是： </p>
+<pre><code>struct sockaddr_in {
+sa_family_tsin_family; /* address family: AF_INET */
+in_port_t  sin_port;   /* port in network byte order */
+struct in_addr sin_addr;   /* internet address */
+};
+
+/* Internet address. */
+struct in_addr {
+uint32_t   s_addr; /* address in network byte order */
+};
+ipv6对应的是： 
+struct sockaddr_in6 { 
+sa_family_t sin6_family;   /* AF_INET6 */ 
+in_port_t   sin6_port; /* port number */ 
+uint32_tsin6_flowinfo; /* IPv6 flow information */ 
+struct in6_addr sin6_addr; /* IPv6 address */ 
+uint32_tsin6_scope_id; /* Scope ID (new in 2.4) */ 
+};
+
+struct in6_addr { 
+unsigned char   s6_addr[16];   /* IPv6 address */ 
+};
+Unix域对应的是： 
+#define UNIX_PATH_MAX108
+
+struct sockaddr_un { 
+sa_family_t sun_family;   /* AF_UNIX */ 
+charsun_path[UNIX_PATH_MAX];  /* pathname */ 
+};
+</code></pre><p>addrlen：对应的是地址的长度。<br>通常服务器在启动的时候都会绑定一个众所周知的地址（如ip地址+端口号），用于提供服务，客户就可以通过它来接连服务器；而客户端就不用指定，有系统自动分配一个端口号和自身的ip地址组合。这就是为什么通常服务器端在listen之前会调用bind()，而客户端就不会调用，而是在connect()时由系统随机生成一个。</p>
+<p>网络字节序与主机字节序<br>主机字节序就是我们平常说的大端和小端模式：不同的CPU有不同的字节序类型，这些字节序是指整数在内存中保存的顺序，这个叫做主机序。引用标准的Big-Endian和Little-Endian的定义如下：</p>
+<p>　　a) Little-Endian就是低位字节排放在内存的低地址端，高位字节排放在内存的高地址端。</p>
+<p>　　b) Big-Endian就是高位字节排放在内存的低地址端，低位字节排放在内存的高地址端。</p>
+<p>网络字节序：4个字节的32 bit值以下面的次序传输：首先是0～7bit，其次8～15bit，然后16～23bit，最后是24~31bit。这种传输次序称作大端字节序。由于TCP/IP首部中所有的二进制整数在网络中传输时都要求以这种次序，因此它又称作网络字节序。字节序，顾名思义字节的顺序，就是大于一个字节类型的数据在内存中的存放顺序，一个字节的数据没有顺序的问题了。</p>
+<p>所以：在将一个地址绑定到socket的时候，请先将主机字节序转换成为网络字节序，而不要假定主机字节序跟网络字节序一样使用的是Big-Endian。由于这个问题曾引发过血案！公司项目代码中由于存在这个问题，导致了很多莫名其妙的问题，所以请谨记对主机字节序不要做任何假定，务必将其转化为网络字节序再赋给socket。</p>
+<p>  <strong>listen()、connect()函数</strong></p>
+<p>如果作为一个服务器，在调用socket()、bind()之后就会调用listen()来监听这个socket，如果客户端这时调用connect()发出连接请求，服务器端就会接收到这个请求。</p>
+<pre><code>int listen(int sockfd, int backlog);
+int connect(int sockfd, const struct sockaddr *addr, socklen_t addrlen);
+</code></pre><p>listen函数的第一个参数即为要监听的socket描述字，第二个参数为相应socket可以排队的最大连接个数。socket()函数创建的socket默认是一个主动类型的，listen函数将socket变为被动类型的，等待客户的连接请求。</p>
+<p>connect函数的第一个参数即为客户端的socket描述字，第二参数为服务器的socket地址，第三个参数为socket地址的长度。客户端通过调用connect函数来建立与TCP服务器的连接。</p>
+<p> <strong>accept()函数</strong></p>
+<p>TCP服务器端依次调用socket()、bind()、listen()之后，就会监听指定的socket地址了。TCP客户端依次调用socket()、connect()之后就想TCP服务器发送了一个连接请求。TCP服务器监听到这个请求之后，就会调用accept()函数取接收请求，这样连接就建立好了。之后就可以开始网络I/O操作了，即类同于普通文件的读写I/O操作。</p>
+<p>int accept(int sockfd, struct sockaddr <em>addr, socklen_t </em>addrlen);<br>accept函数的第一个参数为服务器的socket描述字，第二个参数为指向struct sockaddr *的指针，用于返回客户端的协议地址，第三个参数为协议地址的长度。如果accpet成功，那么其返回值是由内核自动生成的一个全新的描述字，代表与返回客户的TCP连接。</p>
+<p>注意：accept的第一个参数为服务器的socket描述字，是服务器开始调用socket()函数生成的，称为监听socket描述字；而accept函数返回的是已连接的socket描述字。一个服务器通常通常仅仅只创建一个监听socket描述字，它在该服务器的生命周期内一直存在。内核为每个由服务器进程接受的客户连接创建了一个已连接socket描述字，当服务器完成了对某个客户的服务，相应的已连接socket描述字就被关闭。</p>
+<p><strong>read()、write()等函数</strong><br>万事具备只欠东风，至此服务器与客户已经建立好连接了。可以调用网络I/O进行读写操作了，即实现了网咯中不同进程之间的通信！网络I/O操作有下面几组：</p>
+<p>read()/write()</p>
+<p>recv()/send()</p>
+<p>readv()/writev()</p>
+<p>recvmsg()/sendmsg()</p>
+<p>recvfrom()/sendto()</p>
+<p>我推荐使用recvmsg()/sendmsg()函数，这两个函数是最通用的I/O函数，实际上可以把上面的其它函数都替换成这两个函数。它们的声明如下：</p>
+<pre><code> #include &lt;unistd.h&gt;
+ssize_t read(int fd, void *buf, size_t count);
+ssize_t write(int fd, const void *buf, size_t count);
+
+#include &lt;sys/types.h&gt;
+#include &lt;sys/socket.h&gt;
+
+ssize_t send(int sockfd, const void *buf, size_t len, int flags);
+ssize_t recv(int sockfd, void *buf, size_t len, int flags);
+
+ssize_t sendto(int sockfd, const void *buf, size_t len, int flags,
+               const struct sockaddr *dest_addr, socklen_t addrlen);
+ssize_t recvfrom(int sockfd, void *buf, size_t len, int flags,
+                 struct sockaddr *src_addr, socklen_t *addrlen);
+
+ssize_t sendmsg(int sockfd, const struct msghdr *msg, int flags);
+ssize_t recvmsg(int sockfd, struct msghdr *msg, int flags);
+</code></pre><p>read函数是负责从fd中读取内容.当读成功时，read返回实际所读的字节数，如果返回的值是0表示已经读到文件的结束了，小于0表示出现了错误。如果错误为EINTR说明读是由中断引起的，如果是ECONNREST表示网络连接出了问题。</p>
+<p>write函数将buf中的nbytes字节内容写入文件描述符fd.成功时返回写的字节数。失败时返回-1，并设置errno变量。 在网络程序中，当我们向套接字文件描述符写时有俩种可能。1)write的返回值大于0，表示写了部分或者是全部的数据。2)返回的值小于0，此时出现了错误。我们要根据错误类型来处理。如果错误为EINTR表示在写的时候出现了中断错误。如果为EPIPE表示网络连接出现了问题(对方已经关闭了连接)。</p>
+<p>其它的我就不一一介绍这几对I/O函数了，具体参见man文档或者baidu、Google，下面的例子中将使用到send/recv。</p>
+<p>  <strong>close()函数</strong></p>
+<p>在服务器与客户端建立连接之后，会进行一些读写操作，完成了读写操作就要关闭相应的socket描述字，好比操作完打开的文件要调用fclose关闭打开的文件。</p>
+<pre><code>#include &lt;unistd.h&gt;
+int close(int fd);
+</code></pre><p>close一个TCP socket的缺省行为时把该socket标记为以关闭，然后立即返回到调用进程。该描述字不能再由调用进程使用，也就是说不能再作为read或write的第一个参数。</p>
+<p>注意：close操作只是使相应socket描述字的引用计数-1，只有当引用计数为0的时候，才会触发TCP客户端向服务器发送终止连接请求。</p>
+<ul>
+<li><strong>了解SOCKET的接收缓存区、发送缓存区、阻塞/非阻塞、超时等概念</strong></li>
+</ul>
+<p><strong>SOCKET的接收缓存区、发送缓存区</strong></p>
+<p>socket缓冲区</p>
+<p>每个 socket 被创建后，都会分配两个缓冲区，输入缓冲区和输出缓冲区。<br>write()/send() 并不立即向网络中传输数据，而是先将数据写入缓冲区中，再由TCP协议将数据从缓冲区发送到目标机器。一旦将数据写入到缓冲区，函数就可以成功返回，不管它们有没有到达目标机器，也不管它们何时被发送到网络，这些都是TCP协议负责的事情。<br>TCP协议独立于 write()/send() 函数，数据有可能刚被写入缓冲区就发送到网络，也可能在缓冲区中不断积压，多次写入的数据被一次性发送到网络，这取决于当时的网络情况、当前线程是否空闲等诸多因素，不由程序员控制。<br>read()/recv() 函数也是如此，也从输入缓冲区中读取数据，而不是直接从网络中读取</p>
+<p>这些I/O缓冲区特性可整理如下：</p>
+<ol>
+<li>I/O缓冲区在每个TCP套接字中单独存在；</li>
+<li>I/O缓冲区在创建套接字时自动生成；</li>
+<li>即使关闭套接字也会继续传送输出缓冲区中遗留的数据；</li>
+<li>关闭套接字将丢失输入缓冲区中的数据。</li>
+</ol>
+<p><strong>阻塞/非阻塞</strong></p>
+<p>阻塞模式</p>
+<p>对于TCP套接字（默认情况下），当使用 write()/send() 发送数据时：</p>
+<ol>
+<li>首先会检查缓冲区，如果缓冲区的可用空间长度小于要发送的数据，那么 write()/send() 会被阻塞（暂停执行），直到缓冲区中的数据被发送到目标机器，腾出足够的空间，才唤醒 write()/send() 函数继续写入数据</li>
+<li>如果TCP协议正在向网络发送数据，那么输出缓冲区会被锁定，不允许写入，write()/send() 也会被阻塞，直到数据发送完毕缓冲区解锁，write()/send() 才会被唤醒。</li>
+<li>如果要写入的数据大于缓冲区的最大长度，那么将分批写入。</li>
+<li>直到所有数据被写入缓冲区 write()/send() 才能返回。</li>
+</ol>
+<p>当使用 read()/recv() 读取数据时：</p>
+<ol>
+<li><p>首先会检查缓冲区，如果缓冲区中有数据，那么就读取，否则函数会被阻塞，直到网络上有数据到来。</p>
+</li>
+<li><p>如果要读取的数据长度小于缓冲区中的数据长度，那么就不能一次性将缓冲区中的所有数据读出，剩余数据将不断积压，直到有 read()/recv() 函数再次读取。</p>
+</li>
+<li><p>直到读取到数据后 read()/recv() 函数才会返回，否则就一直被阻塞。</p>
+</li>
+</ol>
+<p>这就是TCP套接字的阻塞模式。所谓阻塞，就是上一步动作没有完成，下一步动作将暂停，直到上一步动作完成后才能继续，以保持同步性。<br>TCP套接字默认情况下是阻塞模式</p>
+<p>socket阻塞与非阻塞，同步与异步<a href="https://blog.csdn.net/hguisu/article/details/7453390" target="_blank" rel="noopener">https://blog.csdn.net/hguisu/article/details/7453390</a></p>
+<h1 id="IO复用"><a href="#IO复用" class="headerlink" title="IO复用"></a>IO复用</h1><ul>
+<li><strong>了解select/poll/epoll</strong> <a href="https://www.cnblogs.com/Anker/p/3265058.html" target="_blank" rel="noopener">https://www.cnblogs.com/Anker/p/3265058.html</a></li>
+</ul>
+<p>select，poll，epoll都是IO多路复用的机制。I/O多路复用就通过一种机制，可以监视多个描述符，一旦某个描述符就绪（一般是读就绪或者写就绪），能够通知程序进行相应的读写操作。但select，poll，epoll本质上都是同步I/O，因为他们都需要在读写事件就绪后自己负责进行读写，也就是说这个读写过程是阻塞的，而异步I/O则无需自己负责进行读写，异步I/O的实现会负责把数据从内核拷贝到用户空间</p>
+<p>1、select实现</p>
+<p>select的调用过程如下所示：</p>
+<p><img src="/images/17201205-8ac47f1f1fcd4773bd4edd947c0bb1f4.png" alt></p>
+<p>（1）使用copy_from_user从用户空间拷贝fd_set到内核空间</p>
+<p>（2）注册回调函数__pollwait</p>
+<p>（3）遍历所有fd，调用其对应的poll方法（对于socket，这个poll方法是sock_poll，sock_poll根据情况会调用到tcp_poll,udp_poll或者datagram_poll）</p>
+<p>（4）以tcp_poll为例，其核心实现就是__pollwait，也就是上面注册的回调函数。</p>
+<p>（5) __pollwait的主要工作就是把current（当前进程）挂到设备的等待队列中，不同的设备有不同的等待队列，对于tcp_poll来说，其等待队列是sk-&gt;sk_sleep（注意把进程挂到等待队列中并不代表进程已经睡眠了）。在设备收到一条消息（网络设备）或填写完文件数据（磁盘设备）后，会唤醒设备等待队列上睡眠的进程，这时current便被唤醒了。</p>
+<p>（6）poll方法返回时会返回一个描述读写操作是否就绪的mask掩码，根据这个mask掩码给fd_set赋值。</p>
+<p>（7）如果遍历完所有的fd，还没有返回一个可读写的mask掩码，则会调用schedule_timeout是调用select的进程（也就是current）进入睡眠。当设备驱动发生自身资源可读写后，会唤醒其等待队列上睡眠的进程。如果超过一定的超时时间（schedule_timeout指定），还是没人唤醒，则调用select的进程会重新被唤醒获得CPU，进而重新遍历fd，判断有没有就绪的fd。</p>
+<p>（8）把fd_set从内核空间拷贝到用户空间。</p>
+<p>总结：</p>
+<p>select的几大缺点：</p>
+<p>（1）每次调用select，都需要把fd集合从用户态拷贝到内核态，这个开销在fd很多时会很大</p>
+<p>（2）同时每次调用select都需要在内核遍历传递进来的所有fd，这个开销在fd很多时也很大</p>
+<p>（3）select支持的文件描述符数量太小了，默认是1024</p>
+<p>2 poll实现</p>
+<p>　　poll的实现和select非常相似，只是描述fd集合的方式不同，poll使用pollfd结构而不是select的fd_set结构，其他的都差不多</p>
+<p>3、epoll</p>
+<p>　　epoll既然是对select和poll的改进，就应该能避免上述的三个缺点。那epoll都是怎么解决的呢？在此之前，我们先看一下epoll和select和poll的调用接口上的不同，select和poll都只提供了一个函数——select或者poll函数。而epoll提供了三个函数，epoll_create,epoll_ctl和epoll_wait，epoll_create是创建一个epoll句柄；epoll_ctl是注册要监听的事件类型；epoll_wait则是等待事件的产生。</p>
+<p>　　对于第一个缺点，epoll的解决方案在epoll_ctl函数中。每次注册新的事件到epoll句柄中时（在epoll_ctl中指定EPOLL_CTL_ADD），会把所有的fd拷贝进内核，而不是在epoll_wait的时候重复拷贝。epoll保证了每个fd在整个过程中只会拷贝一次。</p>
+<p>　　对于第二个缺点，epoll的解决方案不像select或poll一样每次都把current轮流加入fd对应的设备等待队列中，而只在epoll_ctl时把current挂一遍（这一遍必不可少）并为每个fd指定一个回调函数，当设备就绪，唤醒等待队列上的等待者时，就会调用这个回调函数，而这个回调函数会把就绪的fd加入一个就绪链表）。epoll_wait的工作实际上就是在这个就绪链表中查看有没有就绪的fd（利用schedule_timeout()实现睡一会，判断一会的效果，和select实现中的第7步是类似的）。</p>
+<p>　　对于第三个缺点，epoll没有这个限制，它所支持的FD上限是最大可以打开文件的数目，这个数字一般远大于2048,举个例子,在1GB内存的机器上大约是10万左右，具体数目可以cat /proc/sys/fs/file-max察看,一般来说这个数目和系统内存关系很大。</p>
+<p>总结：</p>
+<p>（1）select，poll实现需要自己不断轮询所有fd集合，直到设备就绪，期间可能要睡眠和唤醒多次交替。而epoll其实也需要调用epoll_wait不断轮询就绪链表，期间也可能多次睡眠和唤醒交替，但是它是设备就绪时，调用回调函数，把就绪fd放入就绪链表中，并唤醒在epoll_wait中进入睡眠的进程。虽然都要睡眠和交替，但是select和poll在“醒着”的时候要遍历整个fd集合，而epoll在“醒着”的时候只要判断一下就绪链表是否为空就行了，这节省了大量的CPU时间。这就是回调机制带来的性能提升。</p>
+<p>（2）select，poll每次调用都要把fd集合从用户态往内核态拷贝一次，并且要把current往设备等待队列中挂一次，而epoll只要一次拷贝，而且把current往等待队列上挂也只挂一次（在epoll_wait的开始，注意这里的等待队列并不是设备等待队列，只是一个epoll内部定义的等待队列）。这也能节省不少的开销。</p>
+<ul>
+<li><strong>了解基于select/epoll实现的事件循环，Reactor模型</strong> </li>
+</ul>
+<p>Reactor模型<a href="https://blog.csdn.net/u013074465/article/details/46276967" target="_blank" rel="noopener">https://blog.csdn.net/u013074465/article/details/46276967</a></p>
+<ul>
+<li><strong>了解了解可读事件、可写事件</strong> </li>
+</ul>
 
       
     </div>
@@ -652,15 +814,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/04/02/hello-world/" rel="next" title="常见的小问题(持续更新)">
-                <i class="fa fa-chevron-left"></i> 常见的小问题(持续更新)
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/04/02/hello-world/" rel="prev" title="常见的小问题(持续更新)">
+                常见的小问题(持续更新) <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -839,7 +1001,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#多进程-多线程"><span class="nav-number">1.</span> <span class="nav-text">多进程/多线程</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#多进程-多线程"><span class="nav-number">1.</span> <span class="nav-text">多进程/多线程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SOCKET"><span class="nav-number">2.</span> <span class="nav-text">SOCKET</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#IO复用"><span class="nav-number">3.</span> <span class="nav-text">IO复用</span></a></li></ol></div>
             
 
           </div>
